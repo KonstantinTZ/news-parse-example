@@ -7,8 +7,6 @@ async function loadCardsArrFromServer() {
 let data = await loadCardsArrFromServer()
 let cardsData = data.result
 
-console.log('cardsData ->', cardsData)
-
 
 function createCard(date_range, logo, name, brief, location, uri) {
   let cardList = document.getElementById('card-list')
@@ -33,8 +31,8 @@ function createCard(date_range, logo, name, brief, location, uri) {
       </div>
 
       <div class="card__button-wrapper">
-        <button class="btn-reset card__main-btn">Купить билет</button>
-        <button class="btn-reset card__second-btn">Подробнее</button>
+        <button class="btn-reset card__main-btn" >Купить билет</button>
+        <button class="btn-reset card__second-btn" onclick="window.location.href='${uri}'">Подробнее</button>
       </div>
     </div>`
   card.className = "card card__item";

@@ -238,7 +238,7 @@ img {
 body {
   font-family: 'TT Travels', Arial, Verdana, sans-serif;
   background-color: #FFF;
-  max-width: 1920px;
+  min-width: 320px;
 }
 
 .main {
@@ -376,7 +376,7 @@ body {
   text-decoration: underline;
   position: relative;
   margin-bottom: 25px;
-  transition: tran;
+  transition: color 0.2s linear;
 }
 
 .card__info::before {
@@ -389,6 +389,7 @@ body {
   background-image: url('../img/card__arrow.svg');
   background-repeat: no-repeat;
   background-position: center center;
+  transition: transform 0.2s ease-in-out;
 
 }
 
@@ -420,6 +421,7 @@ body {
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .card__main-btn:hover {
@@ -434,6 +436,7 @@ body {
   font-weight: 500;
   line-height: normal;
   text-decoration-line: underline;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .card__second-btn:hover {
