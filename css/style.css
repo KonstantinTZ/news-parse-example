@@ -264,6 +264,10 @@ body {
   list-style: none;
 }
 
+.flex {
+  display: flex;
+  flex-direction: column;
+}
 
 .card-section {
   padding: 30px 0;
@@ -512,4 +516,38 @@ body {
   background: #FFF;
   bottom: 33px;
 
+}
+
+/* preloader */
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  align-self: center;
+  justify-self: center;
+  transition: opacity .2s linear, height .3s linear;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #6B46D4;
+  border-color: #6B46D4 transparent #6B46D4 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.preloader-hidden {
+  opacity: 0;
+  height: 0;
 }

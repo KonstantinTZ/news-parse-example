@@ -1,5 +1,6 @@
 async function loadCardsArrFromServer() {
   const response = await fetch('https://conf.ontico.ru/api/conferences/forCalendar.json');
+  if (response.ok) document.querySelector('.lds-dual-ring').classList.add('preloader-hidden')
   return await response.json();
 }
 
