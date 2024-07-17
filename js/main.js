@@ -8,7 +8,7 @@ async function loadCardsArrFromServer() {
 // получаем данные с сервера
 let data = await loadCardsArrFromServer()
 
-let cardsData = data.result
+let dataFromServer = data.result
 
 // подмешиваем ID
 function idMixin(array) {
@@ -18,11 +18,11 @@ function idMixin(array) {
   return array
 }
 
-idMixin(cardsData)
+let cardsData = idMixin(dataFromServer)
 
 //  Создаём карточку и сразу же инъектируем туда данные
 function createCard(date_range, logo, name, brief, location, uri, incomId) {
-  let cardList = document.getElementById('card-list')
+  // let cardList = document.getElementById('card-list')
   let card = document.createElement('li')
   card.innerHTML = `
     <div class="card__item-body">
@@ -62,15 +62,91 @@ function createCard(date_range, logo, name, brief, location, uri, incomId) {
   // !!! ВАЖНО !!! В ДАТА атрибут кнопки инъектруем ID оъекта
   card.className = "card card__item";
 
-  // card.classList.add('card card__item')
-  // закидываем карточку в родителя
-  cardList.appendChild(card)
+  return card
 }
 
-// парсим карточки из массива
-for (const item of cardsData) {
-  createCard(item.date_range, item.logo, item.name, item.brief, item.location, item.uri, item.id)
+// pagination
+
+let cardsPerPage = 4
+let currentPage = 1
+
+const breakpoint1 = window.matchMedia("(min-width: 1726px)");
+
+const breakpoint2 = window.matchMedia("(min-width: 1294px)");
+
+const breakpoint3 = window.matchMedia("(min-width: 861px)");
+
+
+
+
+
+window.addEventListener("resize", () => {
+  let windowWith = document.documentElement.clientWidth;
+  if (windowWith < 1726) cardsPerPage = 6
+  console.log(cardsPerPage)
+});
+
+
+
+
+// активируем при запуске и нажатии кнопки пагинации
+function displayList(arrData, elPerList, page) {
+  let cardList = document.getElementById('card-list');
+  cardList.innerHTML = '';
+  page--;
+
+  const start = elPerList * page;
+  const end = start + elPerList
+  const paginatedArr = arrData.slice(start, end)
+
+  for (const item of paginatedArr) {
+    let paginatedCard = createCard(item.date_range, item.logo, item.name, item.brief, item.location, item.uri, item.id)
+    cardList.appendChild(paginatedCard)
+  }
+
 }
+
+
+
+function displayPagination(arrData, elPerList) {
+  const paginationContainer = document.querySelector('.pagination-container');
+  const pagesCount = Math.ceil(arrData.length / elPerList);
+  for (let i = 0; i < pagesCount; i++) {
+    const paginationBtn = displayPaginationBtn(i + 1);
+    paginationContainer.appendChild(paginationBtn)
+  }
+}
+
+function displayPaginationBtn(pageNum) {
+  const btn = document.createElement('button');
+  btn.classList.add('pagination-btn', 'btn-reset');
+  btn.innerHTML = pageNum
+
+  // для первого запуска
+  if (currentPage == pageNum) btn.classList.add('pagination-active');
+
+  btn.addEventListener('click', () => {
+    currentPage = pageNum;
+    displayList(cardsData, cardsPerPage, currentPage)
+    // обновляем кнопки на карточках
+    updateMainButtonState()
+    transferIdToModal()
+
+    let paginationBtnArr = document.querySelectorAll('.pagination-btn')
+    paginationBtnArr.forEach((item, index) => {
+      if (index + 1 === currentPage) {
+        item.classList.add('pagination-active');
+      } else {
+        item.classList.remove('pagination-active');
+      }
+    })
+  })
+
+  return btn
+}
+
+displayList(cardsData, cardsPerPage, currentPage)
+displayPagination(cardsData, cardsPerPage)
 
 // определяем модалку
 let modalWindow = document.getElementById("my-modal")
@@ -93,15 +169,25 @@ document.getElementById("close-my-modal-btn").addEventListener("click", function
 })
 
 // собираем все кнопки открывающие модалку, для того что бы модалке передать ID из data атрибута
-let mainbuttonArr = document.querySelectorAll('.card__main-btn')
+function updateMainButtonState() {
+  let mainButtonArr = document.querySelectorAll('.card__main-btn')
+  console.log('кнопки обновились')
+  console.log(mainButtonArr)
+  return mainButtonArr
+}
 
 // находим у кажной кнопки ID, что бы передатб его в модалку
-for (const button of mainbuttonArr) {
-  button.addEventListener('click', () => {
-    let btnId = button.getAttribute('data-id')
-    fillModalWindow(btnId)
-  })
+function transferIdToModal() {
+  for (const button of updateMainButtonState()) {
+    button.addEventListener('click', () => {
+      console.log('card btn clicked')
+      let btnId = button.getAttribute('data-id')
+      fillModalWindow(btnId)
+    })
+  }
 }
+
+transferIdToModal()
 
 // активируем свайпер в модалке, иначе не активируется
 // не знаю правильно ли, но работает
@@ -179,3 +265,4 @@ function fillModalWindow(IncomeId) {
   // активируем свайпер
   swiperActivator()
 }
+

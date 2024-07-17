@@ -242,7 +242,7 @@ body {
 }
 
 .main {
-  margin-bottom: 233px;
+  margin-bottom: 100px;
 }
 
 .container {
@@ -274,15 +274,44 @@ body {
 }
 
 .cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 50px 57px;
   padding: 0;
   margin: 0;
+  margin-bottom: 100px;
   list-style-type: none;
 }
 
+/* @media screen and (max-width: 1716px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px 57px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 100px;
+    list-style-type: none;
+  }
+}
+
+@media screen and (max-width: 1388px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 57px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 100px;
+    list-style-type: none;
+  }
+} */
+
 .card {
+  max-width: 375px;
   border-radius: 10px;
   background: #FFF;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.12);
@@ -306,6 +335,7 @@ body {
 
 .card__item-body {
   height: 100%;
+  min-height: 532px;
   flex-basis: 100%;
   padding: 25px 43px 40px 30px;
   display: flex;
@@ -401,7 +431,7 @@ body {
   color: #6B46D4;
 }
 
-.card__info:hover::before{
+.card__info:hover::before {
   transform: scale(1.3);
 }
 
@@ -527,6 +557,7 @@ body {
   justify-self: center;
   transition: opacity .2s linear, height .3s linear;
 }
+
 .lds-dual-ring:after {
   content: " ";
   display: block;
@@ -538,10 +569,12 @@ body {
   border-color: #6B46D4 transparent #6B46D4 transparent;
   animation: lds-dual-ring 1.2s linear infinite;
 }
+
 @keyframes lds-dual-ring {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -550,4 +583,37 @@ body {
 .preloader-hidden {
   opacity: 0;
   height: 0;
+}
+
+.pagination-container {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 10px;
+}
+
+.pagination-btn {
+
+
+  padding: 20px 40px;
+  border: 1px solid #6B46D4;
+  background-color: #FFF;
+  color: #6B46D4;
+  text-align: center;
+  font-family: TT Travels;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.pagination-btn:hover {
+  background-color: #6B46D4;
+  color: #FFF;
+}
+
+.pagination-active {
+  background-color: #6B46D4;
+  color: #FFF;
 }
