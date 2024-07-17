@@ -284,37 +284,27 @@ body {
   margin: 0;
   margin-bottom: 100px;
   list-style-type: none;
+
 }
 
-/* @media screen and (max-width: 1716px) {
-  .cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 50px 57px;
-    padding: 0;
-    margin: 0;
-    margin-bottom: 100px;
-    list-style-type: none;
-  }
-}
 
-@media screen and (max-width: 1388px) {
-  .cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px 57px;
-    padding: 0;
-    margin: 0;
-    margin-bottom: 100px;
-    list-style-type: none;
-  }
-} */
 
 .card {
   max-width: 375px;
   border-radius: 10px;
   background: #FFF;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.12);
+  animation: 1s showAnim;
+}
+
+@keyframes showAnim {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 
