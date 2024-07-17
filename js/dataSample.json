@@ -1,0 +1,142 @@
+[
+    {
+        "logo": "//conf.ontico.ru//binary/23/5b4/f8fd07bce59d63c79a2747354db/file.svg",
+        "location": "Онлайн: по всему миру",
+        "name": "Онлайн-встреча докладчиков и Программного комитета TeamLead Conf 2024",
+        "date_range": "11 июля 2024",
+        "brief": "Онлайн-встреча докладчиков и Программного комитета TeamLead Conf 2024",
+        "buy": {
+            "link": "//conf.ontico.ru/event/join/open_tl2024-moscow.html",
+            "action": "Регистрация"
+        },
+        "uri": "https://tlconf.info/moscow"
+    },
+    {
+        "logo": "//conf.ontico.ru//binary/4f/6f1/35b95bbaceed0a38a73f61c98c8/file.svg",
+        "location": "Старт Хаб на Красном Октябре (ex. Digital October), Москва",
+        "name": "AiConf 2024",
+        "date_range": "26 и 27 сентября 2024",
+        "brief": "Прикладная техническая конференция по Data Science AiConf 2024",
+        "buy": {
+            "link": "//conf.ontico.ru/conference/join/ai2024-moscow.html?popup=2",
+            "action": "Купить"
+        },
+        "uri": "https://aiconf.ru/2024"
+    },
+    {
+        "logo": "//conf.ontico.ru//binary/22/f40/8204e7700890607c22a0b5a6cb7/file.svg",
+        "location": "Кластер \"Ломоносов\", Москва",
+        "name": "FrontendConf 2024",
+        "date_range": "30 сентября 2024 и 1 октября 2024",
+        "brief": "Профессиональная конференция фронтенд-разработчиков FrontendConf 2024",
+        "buy": {
+            "link": "//conf.ontico.ru/conference/join/fc2024-moscow.html?popup=2",
+            "action": "Купить"
+        },
+        "uri": "https://frontendconf.ru/moscow/2024"
+    },
+    {
+        "logo": "//conf.ontico.ru//binary/5c/6a7/9f962bcad870448fcda9d51a73f/file.svg",
+        "location": "Старт Хаб на Красном Октябре (ex. Digital October), Москва",
+        "name": "Industrial++ Conf 2024",
+        "date_range": "21 и 22 октября 2024",
+        "brief": "Профессиональная конференция для IT-специалистов реального сектора Industrial++ Conf 2024\r\n",
+        "buy": {
+            "link": "//conf.ontico.ru/conference/join/ic2024.html?popup=2",
+            "action": "Купить"
+        },
+        "uri": "https://industrialconf.ru/2024"
+    },
+    {
+        "logo": "//conf.ontico.ru//binary/1a/e9a/d612f8bba633ac93a15cc6ad80b/file.svg",
+        "location": "Москва",
+        "name": "HighLoad++ 2024",
+        "date_range": "28 и 29 ноября 2024",
+        "brief": "Профессиональная конференция разработчиков высоконагруженных систем HighLoad++ 2024",
+        "buy": {
+            "link": "//conf.ontico.ru/conference/join/hl2024-moscow.html?popup=2",
+            "action": "Купить"
+        },
+        "uri": "https://highload.ru/moscow/2024"
+    },
+    {
+        "logo": "//conf.ontico.ru//binary/9d/8c8/3ecd19a7ac8c086cde6a5d56a39/file.svg",
+        "location": "Кампус СКОЛКОВО, Москва",
+        "name": "GolangConf 2024 (в рамках HighLoad++)",
+        "date_range": "28 и 29 ноября 2024",
+        "brief": "Профессиональная конференция для Go-разработчиков GolangConf 2024",
+        "uri": "https://golangconf.ru/moscow/2024"
+    },
+    {
+        "logo": "//conf.ontico.ru//binary/9d/89a/cfc6f89e992df294da8f9acf03f/file.svg",
+        "location": "Москва",
+        "name": "PHP Russia 2024 (в рамках HighLoad++)",
+        "date_range": "28 и 29 ноября 2024",
+        "brief": "Крупнейшая конференция по PHP в России PHP Russia 2024",
+        "uri": "https://phprussia.ru/moscow/2024"
+    },
+    {
+        "logo": "//conf.ontico.ru//binary/2d/5dc/32c1f1a5d5fa2564998e0276b92/file.svg",
+        "location": "Москва и Санкт-Петербург",
+        "name": "KnowledgeConf (в рамках TeamLead Conf++ 2024)",
+        "date_range": "2 и 3 декабря 2024",
+        "brief": "Профессиональная конференция по управлению знаниями KnowledgeConf (в рамках TeamLead Conf++ 2024)",
+        "uri": "https://knowledgeconf.ru/moscow/2024"
+    },
+    {
+        "logo": "//conf.ontico.ru//binary/4a/a1c/88f5f1cdc8c6c66403e5f255cf0/file.svg",
+        "location": "Москва",
+        "name": "TeamLead Conf++ 2024",
+        "date_range": "2 и 3 декабря 2024",
+        "brief": "Единственная профессиональная конференция только для тимлидов TeamLead Conf++ 2024",
+        "buy": {
+            "link": "//conf.ontico.ru/conference/join/tl2024-moscow.html?popup=2",
+            "action": "Купить"
+        },
+        "uri": "https://teamleadconf.ru/moscow/2024"
+    },
+    {
+        "logo": "//conf.ontico.ru//binary/0f/fd5/4157b6f943b551d62cc17f412fe/file.svg",
+        "location": "Москва",
+        "name": "TechLead Conf++ 2024 (в рамках TeamLead Conf)",
+        "date_range": "2 и 3 декабря 2024",
+        "brief": "Профессиональная конференция, посвященная инженерным процессам и практикам TechLead Conf 2024",
+        "uri": "https://techleadconf.ru/moscow/2024"
+    },
+    {
+        "logo": "//conf.ontico.ru//binary/79/ccb/441e48e0fb5b12c4006cbe92be1/file.svg",
+        "location": "Москва",
+        "name": "DevOpsConf 2025",
+        "date_range": "Март 2025",
+        "brief": "Конференция для инженеров и всех, кто должен понимать инженеров DevOpsConf 2025",
+        "buy": {
+            "link": "//conf.ontico.ru/conference/join/dc2025-moscow.html?popup=1",
+            "action": "Купить"
+        },
+        "uri": "https://devopsconf.io/moscow/2025"
+    },
+    {
+        "logo": "//conf.ontico.ru//binary/52/b9e/901603173b625b9ebb14eb12811/file.svg",
+        "location": "Санкт-Петербург",
+        "name": "Saint TeamLead Conf 2025",
+        "date_range": "Июнь 2025",
+        "brief": "Единственная профессиональная конференция только для тимлидов Saint TeamLead Conf 2025",
+        "buy": {
+            "link": "//conf.ontico.ru/conference/join/tl2025-spb.html?popup=1",
+            "action": "Купить"
+        },
+        "uri": "https://teamleadconf.ru/spb/2025"
+    },
+    {
+        "logo": "//conf.ontico.ru//binary/ee/132/e89e9173e9b420956197fb97c7e/file.svg",
+        "location": "Санкт-Петербург",
+        "name": "Saint HighLoad++ 2025",
+        "date_range": "Июнь 2025",
+        "brief": "Профессиональная конференция для разработчиков высоконагруженных систем Saint HighLoad++ 2025",
+        "buy": {
+            "link": "//conf.ontico.ru/conference/join/hl2025-spb.html?popup=1",
+            "action": "Купить"
+        },
+        "uri": "https://highload.ru/spb/2025"
+    }
+]
